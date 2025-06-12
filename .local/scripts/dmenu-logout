@@ -1,0 +1,41 @@
+#!/bin/sh
+
+#bc distros are ass and dont do shit right
+LOCK_SCRIPT="/home/liv/.local/scripts/lock"
+
+#OPTIONS
+MENU="Lock
+Logout
+Shutdown
+Reboot
+Suspend
+Halt
+"
+
+dmenu=$(printf "%s\n" "$MENU" | dmenu -p "Eeepy today?" -l 4 -bw 3)
+
+case "$dmenu" in
+  Lock)
+    exec "$LOCK_SCRIPT"
+    ;;
+  Logout)
+    loginctl terminate-user "$(whoami)"
+    ;;
+  Shutdown)
+    systemctl poweroff
+    ;;
+  Reboot)
+    systemctl reboot
+    ;;
+  Suspend)
+    systemctl suspend && slock
+    ;;
+  Halt)
+    systemctl halt
+    ;;
+  *)
+    notify-send "Not a Valid Option"
+    ;;
+esac
+
+

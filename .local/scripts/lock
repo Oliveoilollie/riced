@@ -1,0 +1,13 @@
+#!/bin/bash
+
+COLOR=dark
+
+killall Vesktop &
+
+/usr/bin/dbus-launch /home/liv/.local/share/flatpak/exports/bin/org.openrgb.OpenRGB --profile "/home/liv/.var/app/org.openrgb.OpenRGB/config/OpenRGB/dark.orp" & slock
+
+#after i unlock my computer. change the colors back
+
+/usr/bin/dbus-launch  /home/liv/.local/share/flatpak/exports/bin/org.openrgb.OpenRGB --profile "/home/liv/.var/app/org.openrgb.OpenRGB/config/OpenRGB/lol.orp" &
+
+
