@@ -1,0 +1,21 @@
+export ZDOTDIR="$HOME/.config/zsh"
+export CM_LAUNCHER='rofi'
+export EDITOR='nvim'
+export BROWSER='firefox'
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+export LESSHISTFILE=-
+export GOPATH="$HOME/.config/go"
+export CONAN_USER_HOME="$HOME/.config/.conan"
+export CARGO_HOME="$HOME/.config/.cargo"
+export PASSWORD_STORE_DIR="$HOME/.config/.password-store"
+cd ~
+export GTK_USE_PORTAL=1
+export QT_QPA_PLATFORMTHEME=qt5ct
+#export QT_QPA_PLATFORM=wayland
+PF_INFO="ascii" 
+export PATH="$PATH:/home/matt/bin:/usr/local/bin:/bin:/usr/local/bin:/home/matt/.local/bin:/home/matt/.config/emacs/bin:/home/matt/.cargo/bin:$PATH"
+export EDITOR='nvim'
+#export QT_QPA_PLATFORM=wayland
+export BROWSER='Arch-vivaldi-stable'#QT_PLUGIN_PATH=$HOME/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/
